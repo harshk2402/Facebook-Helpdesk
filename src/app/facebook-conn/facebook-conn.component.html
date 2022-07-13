@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="notLoggedIn" *ngIf="!isLoggedIn">
+    <div class="title">
+      <h2 style="font-size:x-large">Facebook Page Integration</h2>
+    </div>
+    <button class="btn btn-primary" id="connect" (click)="login()">Connect Page</button>
+  </div>
+  <div class="notLoggedIn" *ngIf="isLoggedIn">
+    <div class="title">
+      <h2 style="font-size:x-large">Facebook Page Integration</h2>
+      <h2 style="font-size:x-large;">Integrated Page: <span style="font-weight: bold;">{{ fbUser?.name }}</span></h2>
+    </div>
+    <button class="btn btn-warn" id="logout" (click)="logout()">Delete Integration</button>
+    <button class="btn btn-primary" id="reply" (click)="reply()">Reply to Messages</button>
+  </div>
+</div>

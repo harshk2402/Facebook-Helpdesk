@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { FacebookAuthService } from '../facebook-conn/facebook-auth.service';
 import { AuthService } from './auth.service';
 import { User } from './user.model';
 
@@ -15,8 +16,9 @@ export class HomePageComponent implements OnInit, OnDestroy {
   @ViewChild('emailLogin') emailLogin !: ElementRef<HTMLInputElement>;
   @ViewChild('passLogin') passLogin !: ElementRef<HTMLInputElement>;
   isLoggedIn = false;
+  isAtMessages = false;
 
-  constructor(public authService: AuthService) { }
+  constructor(private authService: AuthService, private fbAuth: FacebookAuthService) { }
 
   ngOnInit(): void {
     this.authService.userObs.subscribe((user: User) => {
@@ -26,7 +28,11 @@ export class HomePageComponent implements OnInit, OnDestroy {
         else {
           this.isLoggedIn = false;
         }
-    })
+    });
+
+    this.fbAuth.messageSub.subscribe((isAtMessages: boolean) => {
+      this.isAtMessages = isAtMessages;
+    });
   }
 
   signup(name: string, email: string, password: string) {
@@ -41,9 +47,9 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   login(email: string, password: string) {
-    this.authService.login(email, password);
     this.emailLogin.nativeElement.value = "";
     this.passLogin.nativeElement.value = "";
+    this.authService.login(email, password);
   }
 
   ngOnDestroy(): void {
