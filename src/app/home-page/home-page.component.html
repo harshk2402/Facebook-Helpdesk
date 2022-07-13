@@ -1,48 +1,51 @@
 <div class="overall">
   <div class="auth">
-      <div class="create" class="form-group" *ngIf="isOnRegister">
+      <div class="create" class="form-group" *ngIf="isOnRegister && !isLoggedIn">
         <h2 class="title">Create Account</h2>
         <div class="formControlDiv">
           <p id="name">Name</p>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" #nameInp>
         </div>
         <div class="formControlDiv">
           <p id="name">Email</p>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" #emailInp email>
         </div>
         <div class="formControlDiv">
           <p id="name">Password</p>
-          <input type="password" class="form-control">
+          <input type="password" class="form-control" #passInp>
         </div>
         <div class="rememberMe">
           <div class="checkbox">
             <label class="checkboxValue"><input id="rememberInput" type="checkbox" value=""><span id="rememberLabel">Remember Me</span></label>
           </div>
         </div>
-        <button class="btn btn-primary signupBtn">Sign Up</button>
+        <button class="btn btn-primary signupBtn" (click)="signup(nameInp.value, emailInp.value, passInp.value);">Sign Up</button>
         <div class="toLogin">
           <p>Already have an account? <a href="" id="loginLink" (click)="isOnRegister = false">Login</a></p>
         </div>
       </div>
-      <div class="login" *ngIf="!isOnRegister">
+      <div class="login" *ngIf="!isOnRegister && !isLoggedIn">
         <h2 class="title">Login to your account</h2>
         <div class="formControlDiv">
           <p id="name">Email</p>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" #emailLogin>
         </div>
         <div class="formControlDiv">
           <p id="name">Password</p>
-          <input type="password" class="form-control">
+          <input type="password" class="form-control" #passwordLogin>
         </div>
         <div class="rememberMe">
           <div class="checkbox">
             <label class="checkboxValue"><input id="rememberInput" type="checkbox" value=""><span id="rememberLabel">Remember Me</span></label>
           </div>
         </div>
-        <button class="btn btn-primary signupBtn">Sign Up</button>
+        <button class="btn btn-primary signupBtn" (click)="login(emailLogin.value, passwordLogin.value)">Log in</button>
         <div class="toLogin">
           <p>New? <a href="" id="loginLink" (click)="isOnRegister = true">Sign Up</a></p>
         </div>
+      </div>
+      <div class="onLogin" *ngIf="isLoggedIn">
+        Lmao
       </div>
   </div>
 </div>
