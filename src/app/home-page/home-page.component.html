@@ -1,4 +1,4 @@
-<div class="overall">
+<div class="overall" *ngIf="!isAtMessages">
   <div class="auth">
       <div class="create" class="form-group" *ngIf="isOnRegister && !isLoggedIn">
         <h2 class="title">Create Account</h2>
@@ -45,7 +45,9 @@
         </div>
       </div>
       <div class="onLogin" *ngIf="isLoggedIn">
-        Lmao
+        <app-facebook-conn></app-facebook-conn>
       </div>
   </div>
 </div>
+<app-messenger *ngIf="isAtMessages"></app-messenger>
+

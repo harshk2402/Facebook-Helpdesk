@@ -8,13 +8,17 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 import * as firebase from 'firebase/app';
 import { environment } from 'src/environments/environment';
+import { FacebookConnComponent } from './facebook-conn/facebook-conn.component';
+import { MessengerComponent } from './messenger/messenger.component';
 
 firebase.initializeApp(environment.firebaseConfig);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    FacebookConnComponent,
+    MessengerComponent
   ],
   imports: [
     BrowserModule,

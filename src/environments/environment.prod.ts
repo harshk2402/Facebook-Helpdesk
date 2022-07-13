@@ -7,5 +7,10 @@ export const environment = {
     storageBucket: "facebook-helpdesk-c372a.appspot.com",
     messagingSenderId: "857432756479",
     appId: "1:857432756479:web:f326e6dc36a14dc1affcca"
+  },
+  fbParams: {
+    appId: '1016299995720119',
+    xfbml: true,
+    version: 'v2.8'
   }
 };
