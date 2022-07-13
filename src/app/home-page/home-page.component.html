@@ -1,0 +1,48 @@
+<div class="overall">
+  <div class="auth">
+      <div class="create" class="form-group" *ngIf="isOnRegister">
+        <h2 class="title">Create Account</h2>
+        <div class="formControlDiv">
+          <p id="name">Name</p>
+          <input type="text" class="form-control">
+        </div>
+        <div class="formControlDiv">
+          <p id="name">Email</p>
+          <input type="text" class="form-control">
+        </div>
+        <div class="formControlDiv">
+          <p id="name">Password</p>
+          <input type="password" class="form-control">
+        </div>
+        <div class="rememberMe">
+          <div class="checkbox">
+            <label class="checkboxValue"><input id="rememberInput" type="checkbox" value=""><span id="rememberLabel">Remember Me</span></label>
+          </div>
+        </div>
+        <button class="btn btn-primary signupBtn">Sign Up</button>
+        <div class="toLogin">
+          <p>Already have an account? <a href="" id="loginLink" (click)="isOnRegister = false">Login</a></p>
+        </div>
+      </div>
+      <div class="login" *ngIf="!isOnRegister">
+        <h2 class="title">Login to your account</h2>
+        <div class="formControlDiv">
+          <p id="name">Email</p>
+          <input type="text" class="form-control">
+        </div>
+        <div class="formControlDiv">
+          <p id="name">Password</p>
+          <input type="password" class="form-control">
+        </div>
+        <div class="rememberMe">
+          <div class="checkbox">
+            <label class="checkboxValue"><input id="rememberInput" type="checkbox" value=""><span id="rememberLabel">Remember Me</span></label>
+          </div>
+        </div>
+        <button class="btn btn-primary signupBtn">Sign Up</button>
+        <div class="toLogin">
+          <p>New? <a href="" id="loginLink" (click)="isOnRegister = true">Sign Up</a></p>
+        </div>
+      </div>
+  </div>
+</div>
