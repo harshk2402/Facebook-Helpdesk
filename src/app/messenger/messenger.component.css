@@ -1,3 +1,109 @@
-html *{
-  background-color: green;
+.c {
+  border: 1px solid #ebebeb;
+  padding: 0;
+}
+
+.np {
+  padding: 0;
+}
+
+.nm {
+  margin: 0;
+}
+
+.taskbar {
+  padding: 0;
+  background-color: #044c94;
+  border: 1px solid #044c94;
+}
+
+.r {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  margin: 0;
+}
+
+.nr {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.firstCol {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  border-right: 0;
+}
+
+.firstCol:hover {
+  background-color: #ebebeb;
+  border: 1px solid #ebebeb;
+}
+
+.secondCol {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 5vh;
+  border-right: 0;
+}
+
+.chatbox {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background-color: #f6f6f7;
+}
+
+.thirdCol {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  height: 5vh;
+  border-left: 0;
+  border-right: 0;
+}
+
+.fourthCol {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  height: 25vh;
+  border-left: 0;
+}
+
+.heading {
+  position: relative;
+  top: 15%;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.home {
+  color: white;
+  font-size:xx-large;
+  position: relative;
+  top: 20%;
+}
+.firstCol:hover .home {
+  color:#044c94;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  height: 40%;
+  width: 28%;
+  border-radius: 50%;
 }
