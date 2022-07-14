@@ -1,1 +1,57 @@
-<p>messenger works!</p>
+<div class="container">
+  <div class="row r">
+    <div class="col-md-1 c taskbar">
+      <div class="row nm">
+        <div class="col-md-12 firstCol">
+          <i class="bi bi-house-fill clickable home"></i>
+        </div>
+      </div>
+      <div class="row nm">
+        <div class="col-md-12 firstCol">
+          <i class="bi bi-inbox-fill clickable home"></i>
+        </div>
+      </div>
+      <div class="row nm">
+        <div class="col-md-12 firstCol">
+          <i class="bi bi-person-circle clickable home"></i>
+        </div>
+      </div>
+      <div class="row nm">
+        <div class="col-md-12 firstCol">
+          <i class="bi bi-graph-up-arrow clickable home"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 c np">
+      <div class="row nm">
+        <div class="col-md-12 c secondCol">
+          <h2 class="np nm heading">Conversations</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 c np">
+      <div class="row nm">
+        <div class="col-md-12 c thirdCol">
+          <h2 class="nm heading" style="padding-left: 2%;">{{ fbUser?.name }}</h2>
+        </div>
+      </div>
+      <div class="row nm">
+        <div class="col-md-12 chatbox">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 c np">
+      <div class="row nm">
+        <div class="col-md-12 c fourthCol">
+          <div style="height: 50%;">
+            <img src="{{ fbUser?.url }}" alt="" class="circle">
+          </div>
+          <div style="height: 50%; text-align: center;">
+            <p style="margin-top: 10%; font-size: large; font-weight: 700;">{{ fbUser?.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
