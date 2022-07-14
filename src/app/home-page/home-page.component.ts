@@ -15,7 +15,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   @ViewChild('passInp') passInp !: ElementRef<HTMLInputElement>;
   @ViewChild('emailLogin') emailLogin !: ElementRef<HTMLInputElement>;
   @ViewChild('passLogin') passLogin !: ElementRef<HTMLInputElement>;
-  isLoggedIn = true;
+  isLoggedIn = false;
   isAtMessages = false;
 
   constructor(private authService: AuthService, private fbAuth: FacebookAuthService) { }
